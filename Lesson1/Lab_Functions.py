@@ -23,6 +23,8 @@ def friends():
         print("%s was not found in the friends list and was now added." %(FRIEND))
         FRIEND_LIST.append(FRIEND)
 
+
+# The main code
 while(True):
     CHOICE = int(input('''
     Please choose an option from the following menu:
