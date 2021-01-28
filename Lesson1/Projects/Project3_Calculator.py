@@ -10,3 +10,6 @@ sleep(2)
 print("Working....")
 sleep(2)
 print("The result is: ", int(N1+N2+N3))
+
+### another way:
+# print(n+ (n*10+n) + (n*100+n*10+n))
