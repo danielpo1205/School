@@ -1,0 +1,26 @@
+'''
+Final course project - "graduation":
+Writing a program that will execute the different options in the following menu:
+
+Creat a main menu:
+A. IP system
+B. DNS system
+
+Sub menu:
+A
+===
+    1. Search for IP address from a list.
+    2. Add an IP address to a list.
+    3. Delete IP address from a list.
+    4. Print all the IPs to the screen.
+    * The list will be stored in a *.*txt file. The program will first check if such a file already exists and if not
+    will create a new file.
+
+B
+===
+    1. Search for a URL in a dictionary.
+    2. Add a URL + IP address to a dictionary.
+    3. Delete a URL from a dictionary.
+    4. Update the IP address of a specific URL.
+    5. Print all URL:IP entries in the dictionary to the screen.
+'''
