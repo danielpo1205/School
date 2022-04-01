@@ -8,19 +8,19 @@ from random import randint
 
 
 # Setting definitions
-def choose_numbers():
+def choose_numbers(num1=0):
     sleep(2)
     print("\nPlease choose 6 numbers and prepare to type them in according to the sequence that will be presented shortly.")
     sleep(2)
     UserList = [int(input("Please enter the first number:"))]
     UserList, run = [], 0
     while run < 7:
-        User_number = RANDOM.randint(1, 37)
+        User_number = randint(1, 37)
         if User_number not in UserList:
             if run == 6:
-                UserList.append('+' + str(number))
+                UserList.append('+' + str(num1))
                 break
-            UserList.append(number)
+            UserList.append(num1)
             run += 1
     print("\nThe numbers you chose are:", UserList)
     sleep(3)
