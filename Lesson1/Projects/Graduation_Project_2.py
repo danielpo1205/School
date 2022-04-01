@@ -8,20 +8,17 @@ from random import randint
 
 
 # Setting definitions
-def choose_numbers(num1=0):
+def choose_numbers(run=0):
     sleep(2)
-    print("\nPlease choose 6 numbers and prepare to type them in according to the sequence that will be presented shortly.")
+    print("\nBe ready to choose 6 numbers and prepare to type them in according to the sequence that will be presented shortly.")
     sleep(2)
-    UserList = [int(input("Please enter the first number:"))]
-    UserList, run = [], 0
-    while run < 7:
-        User_number = randint(1, 37)
-        if User_number not in UserList:
-            if run == 6:
-                UserList.append('+' + str(num1))
-                break
-            UserList.append(num1)
-            run += 1
+    #UserList = UserList.append[int(input("Please enter the first number. \nThe number must be between 1 and 37:"))]
+    UserList = []
+    while run < 6:
+        chosen_num = (int(input("Please enter a number. \nThe number must be between 1 and 37:")))
+        if chosen_num not in UserList:
+                UserList.append(chosen_num)
+        run += 1
     print("\nThe numbers you chose are:", UserList)
     sleep(3)
 
@@ -29,14 +26,14 @@ def roll_numbers():
     sleep(3)
     print("Stand by, choosing random numbers....")
     RandList, run = [], 0
-    while run < 7:
-        number = random.randint(1, 37)
+    number = 0
+    while run < 6:
+        number = number.randint(str(1, 37))
         if number not in RandList:
             if run == 6:
                 RandList.append('+' + str(number))
                 TOTAL_PRIZE = TOTAL_PRIZE + 1
                 break
-            RandList.append(number)
             run += 1
             TURNS += 1
     print(RandList)
