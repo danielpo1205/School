@@ -1,4 +1,4 @@
-# Practicing "while loops" - printing Fibonacci numbers.
+4# Practicing "while loops" - printing Fibonacci numbers.
 #
 # from time import sleep
 #
