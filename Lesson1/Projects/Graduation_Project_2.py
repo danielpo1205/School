@@ -12,31 +12,46 @@ def choose_numbers(run=0):
     sleep(2)
     print("\nBe ready to choose 6 numbers and prepare to type them in according to the sequence that will be presented shortly.")
     sleep(2)
-    #UserList = UserList.append[int(input("Please enter the first number. \nThe number must be between 1 and 37:"))]
-    UserList = []
+    user_list = []
     while run < 6:
         chosen_num = (int(input("Please enter a number. \nThe number must be between 1 and 37:")))
-        if chosen_num not in UserList:
-                UserList.append(chosen_num)
+        if chosen_num not in user_list:
+                user_list.append(chosen_num)
         run += 1
     print("\nThe numbers you chose are:", UserList)
     sleep(3)
 
-def roll_numbers():
+def roll_numbers(run_num=0, total_prize=0, winnings=0):
     sleep(3)
     print("Stand by, choosing random numbers....")
-    RandList, run = [], 0
-    number = 0
+    rand_list, run = [], 0
     while run < 6:
-        number = number.randint(str(1, 37))
-        if number not in RandList:
-            if run == 6:
-                RandList.append('+' + str(number))
-                TOTAL_PRIZE = TOTAL_PRIZE + 1
+        run_num = run_num.randint(1, 37)
+        if run_num not in rand_list:
+            if run_num in user_list:
+                rand_list.append('+' + str(number))
+                total_prize = total_prize + 1
                 break
             run += 1
-            TURNS += 1
-    print(RandList)
+            turns += 1
+    print("The numbers that were chosen randomly by the lottery program are:", rand_list)
+    sleep(2)
+    if total_prize == 1:
+        print("Sorry bro, no winnings this time.")
+    elif total_prize == 2:
+        print("Sorry bro, no winnings this time.")
+    elif total_prize == 3:
+        print("You've earned yourself 10 NIS!")
+        winnings = winnings + 10
+    elif total_prize == 4:
+        print("You've earned yourself 100 NIS!")
+        winnings = winnings + 100
+    elif total_prize == 5:
+        print("You've earned yourself 5000 NIS!")
+        winnings = winnings + 5000
+    elif total_prize == 6:
+        print("You've won the GRAND PRIZE OF 1 MILLION NIS!!!")
+        winnings = winnings + 1000000
     sleep(3)
 
 
