@@ -8,33 +8,36 @@ from random import randint
 
 
 # Setting definitions
-def choose_numbers(run=0):
+from typing import List
+
+
+def choose_numbers(run1=0):
     sleep(2)
     print("\nBe ready to choose 6 numbers and prepare to type them in according to the sequence that will be presented shortly.")
     sleep(2)
     user_list = []
-    while run < 6:
+    while run1 < 6:
         chosen_num = (int(input("Please enter a number. \nThe number must be between 1 and 37:")))
         if chosen_num not in user_list:
                 user_list.append(chosen_num)
-        run += 1
-    print("\nThe numbers you chose are:", UserList)
+        run1 += 1
+    print("\nThe numbers you chose are:", user_list)
     sleep(3)
 
-def roll_numbers(run_num=0, total_prize=0, winnings=0):
+def roll_numbers(run2=0, run_num=0, total_prize=0, winnings=0, turns=0):
     sleep(3)
     print("Stand by, choosing random numbers....")
-    rand_list, run = [], 0
-    while run < 6:
-        run_num = run_num.randint(1, 37)
-        if run_num not in rand_list:
-            if run_num in user_list:
-                rand_list.append('+' + str(number))
+    lottery_list: list[str] = []
+    while run2 < int(6):
+        lottery_list = lottery_list.randint(1, 37)
+        if run_num not in lottery_list:
+            if lottery_list in user_list:
+                lottery_list.append('+' + str(number))
                 total_prize = total_prize + 1
                 break
-            run += 1
+            run2 += 1
             turns += 1
-    print("The numbers that were chosen randomly by the lottery program are:", rand_list)
+    print("The numbers that were chosen randomly by the lottery program are:", lottery_list)
     sleep(2)
     if total_prize == 1:
         print("Sorry bro, no winnings this time.")
